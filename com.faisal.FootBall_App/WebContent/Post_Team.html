@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>FootBall World</title>
+
+<script src="js/jquery-min.js"></script>
+<script src="js/polyfill.js"></script>
+<script src="js/action.js"></script>
+<script src="js/post.js"></script>
+
+
+</head>
+<style>
+body {
+	background-image:
+		url("http://www.hdwallpapers1.in/download/cristiano_ronaldo_football_player-1920x1080.jpg");
+	opacity: 0.8;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+</style>
+<body>
+
+	<div align="center">
+		<h1>
+			<font color="lightblue">FootBall World Page</font>
+		</h1>
+	</div>
+
+	<div align="center">
+		<p>
+			<font color="darkgrey"><b>Here we will keep you updated
+					with news and reports in the FootBall World.</b></font>
+		</p>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<form id="enterTeamData" name="enterData" action="#">
+		<div align="center">
+
+			<table>
+
+
+				<tr>
+					<td><font color="lightblue">Team Name</font></td>
+					<td><input type="Text" name="TeamName" id="teamName"
+						style="width: 191px" class="alpha-only"><input
+						name="Status" type="hidden" value="status" id="lblStatus"
+						class="alpha-only"></td>
+				<tr>
+					<td><font color="lightblue">Team Code</font></td>
+					<td><input type="Text" name="TeamCode" id="teamCode"
+						style="width: 191px"></td>
+				</tr>
+
+			</table>
+		</div>
+		<br>
+		<div align="center">
+			<input type="submit" value="Save Team" id="btnSaveTeam"
+				style="width: 142px; margin-left: 65px"> <br> <br>
+			<input type="button" value="Cancel" id="btnCancel"
+				style="width: 142px; margin-left: 65px">
+		</div>
+
+	</form>
+
+
+</body>
+</html>
