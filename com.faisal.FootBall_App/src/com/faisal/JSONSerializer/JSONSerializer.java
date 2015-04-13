@@ -42,8 +42,8 @@ public class JSONSerializer {
 					} else if (rsmd.getColumnType(i) == java.sql.Types.VARCHAR) {
 
 						temp = rs.getString(column_name); // saving column
-						temp = ESAPI.encoder().canonicalize(temp);
-						temp = ESAPI.encoder().encodeForHTML(temp);
+						//temp = ESAPI.encoder().canonicalize(temp);
+						//temp = ESAPI.encoder().encodeForHTML(temp);
 						jsonObject.put(column_name, temp);
 
 						// jsonObject.put(column_name, rs.getString(i));

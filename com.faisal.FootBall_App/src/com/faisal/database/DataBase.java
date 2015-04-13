@@ -20,7 +20,7 @@ public class DataBase {
 			if (context == null)
 				context = new InitialContext();
 
-			database = (DataSource) context.lookup("Faisal_FootBall_APP");
+			database = (DataSource) context.lookup("project");
 
 		} catch (Exception e) {
 			e.printStackTrace();

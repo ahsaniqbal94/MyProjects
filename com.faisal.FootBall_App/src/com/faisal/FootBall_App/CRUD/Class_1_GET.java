@@ -26,7 +26,47 @@ public class Class_1_GET {
 	static String Message = "UNMATCHED.... Enter correct field or Server was Unreachable....";
 	String getData,returnString = null;
 
+	
+	/////////////////////////Get Names of all the teams//////////////////////////
+	
+	@Path("/Teams")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response TeamsNames()
+			throws Exception {
+		try {
+			jsonArray = queriesObject.returnAllTeams();
+			getData = jsonArray.toString();
+
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return Response.status(500).entity(Message).build();
+		}
+
+		return Response.ok(getData).build();
+	}
+	///////////////////GET PLAYERS DATA FOR UPDATION//////////////////////////
+	
+	@Path("/Players/ByTeam/{teamName}")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response PlayersNames(@PathParam("teamName") String teamName)
+			throws Exception {
+		try {
+			jsonArray = queriesObject.returnPlayersViaTeam(teamName);
+			getData = jsonArray.toString();
+
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return Response.status(500).entity(Message).build();
+		}
+
+		return Response.ok(getData).build();
+	}
+
 	// /////////////////////////////////PLAYERS///////////////////////////////
+
+	
 	@Path("/Players/{playerName}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)

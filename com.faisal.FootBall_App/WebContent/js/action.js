@@ -9,16 +9,22 @@ $(document).ready(function() {
 		$('#btnSavePlayer').attr('disabled', true);
 		$('#btnSaveTeam').attr('disabled', true);
 	});
+	
+	$('#UpdatePlayerPicture').change(function(){
+		$("#UpdateFormImage").attr('src',$('#UpdatePlayerPicture').val());
+	});
 
-	$("#playerID").keypress(function(e) {
+	$('#UpdatePlayerPictureFS').change(function(){
+		$("#UpdateFormImageFS").attr('src',$('#UpdatePlayerPictureFS').val());
+	});
+/*	
+	$(".digit-only").keypress(function(e) {
 		// if the letter is not digit then display error and don't type anything
 		if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
 			// display error message
-			$("#lblStatus").html("Digits Only...").show().fadeOut("slow");
-			return false;
 		}
 	});
-
+/*
 	$(".alpha-only").on("keydown", function(event) {
 		// Ignore controls such as backspace
 		var arr = [ 8, 16, 17, 35, 36, 37, 38, 39, 40, 45, 46 ];
@@ -30,9 +36,9 @@ $(document).ready(function() {
 			event.preventDefault();
 		}
 	});
-
+*/
 	$(".alpha-only").on("input", function() {
-		var regexp = /[^a-zA-Z]/g;
+		var regexp = /[^a-zA-Z ]/gi;
 		if ($(this).val().match(regexp)) {
 			$(this).val($(this).val().replace(regexp, ''));
 		}

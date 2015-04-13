@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Update</title>
+	
+	<script src="js/jquery-min.js"></script>
+	<script src="js/polyfill.js"></script>
+	<script src="js/put.js"></script>
+	<script src="js/action.js"></script>
+</head>
+<body style="fontsize:19px ; text-align: center; color:#303; background-color:#999" >
+<div align="center">
+<table width="294" height="87"><tr>
+<td width="111" height="36">Select Team</td>
+ <td width="167">  <select name="UpdatePlayerSelectTeam" id="UpdatePlayerSelectTeam">
+  <option value="0" selected="selected">Not_Selected</option>
+</select></td></tr>
+<tr style="text-align: left">
+<td>Select Player</td><td> <select  name="UpdatePlayerSelectPlayer" id="UpdatePlayerSelectPlayer" >
+    <option value="0" selected="selected">Not_Selected</option>
+  </select></td>
+  </tr>
+</table>
+<form id="UpdatePlayerForm">
+<table  border=1>
+<tr>
+<td width="137">PlayerName</td>
+<td width="155"><input type="text" name="PlayerName"  id="UpdatePlayerName"></input></td>
+<tr>
+<td>Team</td>
+<td><input type="text" name="TeamName"  id="UpdatePlayerTeam"></input></td>
+<tr>
+<td>Age</td>
+<td><input type="text" name="Age"  id="UpdatePlayerAge"></input></td>
+<tr>
+<td >Nationality</td>
+<td ><input type="text" name="Nationality"  id="UpdatePlayerNationality"></input></td>
+<tr>
+<td>PictureUrl</td>
+<td>
+<img  id="UpdateFormImage" width=64px height=64px/><br />
+<input type="text" name="Picture"  id="UpdatePlayerPicture"></input>
+</td>
+<tr>
+<td>PictureUrlFS</td>
+<td>
+<img id="UpdateFormImageFS" width=64px height=64px/><br />
+<input type="text" name="PictureFS" id="UpdatePlayerPictureFS"></input>
+</td>
+<tr>
+<td>Position</td>
+<td ><input type="text" name="Position"  id="UpdatePlayerPosition"></input></td>
+<tr>
+<td>Matches Played</td>
+<td><input type="text" name="MatchesPlayed"  id="UpdatePlayerMatches"></input></td>
+<tr>
+<td>Goals</td>
+<td><input type="text" name="Goals"  id="UpdatePlayerGoals"></input></td>
+<tr>
+<td>Assists</td>
+<td><input type="text" name="Assists"  id="UpdatePlayerAssists"></input> </td>
+<tr>
+<td>Penalty Saved</td>
+<td><input type="text" name="PenaltySaved"  id="UpdatePlayerPenalty"></input></td>
+<tr>
+<td height="42"><button title="Save" type="submit" id="UpdatePlayerSaveButton" style="height: 38px; width: 136px; ">Save</button></td>
+<td><button title="Discard Changes" id="UpdatePlayerDiscardButton" type="button" style="height: 36px; width: 156px; ">Discard Changes</button></td>
+</table>
+</form>
+</div>
+<p id="update_response"></p>
+</body>
+</html>

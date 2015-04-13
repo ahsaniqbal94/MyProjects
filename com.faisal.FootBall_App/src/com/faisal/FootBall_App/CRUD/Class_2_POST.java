@@ -39,14 +39,13 @@ public class Class_2_POST {
 				// jsonObject.put("MSG", "Data Entered Successfully");
 				returnString = jsonArray.put(jsonObject).toString();
 			} else {
-				return Response.status(500).entity("Request was not Procesed")
+				return Response.status(500).entity("Request was not Processed")
 						.build();
 
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
-			return Response.status(500).entity("Request was not Procesed")
+			return Response.status(500).entity("Request was not Processed")
 					.build();
 
 		}
